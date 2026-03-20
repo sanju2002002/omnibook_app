@@ -23,7 +23,7 @@ class _BookingScreenState extends State<BookingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    /// 🔥 OPTIMIZED LISTENERS (NO FULL REBUILD)
+    /// 
     final duration = context.select<BookingProvider, int>(
       (p) => p.totalDuration,
     );
@@ -35,7 +35,7 @@ class _BookingScreenState extends State<BookingScreen> {
 
     final slots = SlotService.generateSlots();
 
-    /// 🔥 RESPONSIVE GRID
+    /// 
     final width = MediaQuery.of(context).size.width;
     final crossAxisCount = width > 600 ? 4 : 3;
 
@@ -54,7 +54,7 @@ class _BookingScreenState extends State<BookingScreen> {
           child: SafeArea(
             child: Column(
               children: [
-                /// 🔥 HEADER
+                ///  HEADER
                 _header(context),
 
                 /// 🔹 INFO
@@ -120,7 +120,7 @@ class _BookingScreenState extends State<BookingScreen> {
                   ),
                 ),
 
-                /// 🔥 BOTTOM BAR
+                ///  BOTTOM BAR
                 AnimatedSwitcher(
                   duration: const Duration(milliseconds: 300),
                   child: selectedSlot == null
@@ -135,7 +135,7 @@ class _BookingScreenState extends State<BookingScreen> {
     );
   }
 
-  /// 🔥 HEADER
+  ///  HEADER
   Widget _header(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -188,7 +188,7 @@ class _BookingScreenState extends State<BookingScreen> {
     );
   }
 
-  /// 🔥 BOTTOM BAR
+  ///  BOTTOM BAR
   Widget _bottomBar(
     BuildContext context,
     int duration,
@@ -229,7 +229,7 @@ class _BookingScreenState extends State<BookingScreen> {
             ),
             const SizedBox(height: 12),
 
-            /// 🔥 BUTTON
+            ///  BUTTON
             GestureDetector(
               onTap: isEnabled
                   ? () {
