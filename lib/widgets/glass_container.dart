@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class GlassContainer extends StatelessWidget {
   final Widget child;
 
-  /// 
+  
   final double blur;
   final double borderRadius;
   final EdgeInsets padding;
