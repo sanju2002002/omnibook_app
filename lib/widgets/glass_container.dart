@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class GlassContainer extends StatelessWidget {
   final Widget child;
 
-  /// 🔥 CUSTOMIZATION
+  /// 
   final double blur;
   final double borderRadius;
   final EdgeInsets padding;
@@ -26,7 +26,7 @@ class GlassContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepaintBoundary(
-      // 🔥 PERFORMANCE BOOST
+      // 
       child: ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
         child: BackdropFilter(
@@ -37,13 +37,13 @@ class GlassContainer extends StatelessWidget {
               color: color,
               borderRadius: BorderRadius.circular(borderRadius),
 
-              /// 🔥 BORDER
+              /// 
               border: Border.all(
                 color: Colors.white.withOpacity(borderOpacity),
                 width: 1,
               ),
 
-              /// 🔥 SHADOW (PREMIUM DEPTH)
+              /// 
               boxShadow: enableShadow
                   ? [
                       BoxShadow(
