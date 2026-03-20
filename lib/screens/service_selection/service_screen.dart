@@ -15,7 +15,7 @@ class ServiceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// 🔥 OPTIMIZED SELECTORS
+    /// 
     final selectedServices = context.select<BookingProvider, List<Service>>(
       (p) => p.selectedServices,
     );
@@ -43,7 +43,7 @@ class ServiceScreen extends StatelessWidget {
               children: [
                 _header(context),
 
-                /// 🔥 TITLE
+                /// 
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                   child: Align(
@@ -59,7 +59,7 @@ class ServiceScreen extends StatelessWidget {
                   ),
                 ),
 
-                /// 🔥 SERVICES
+                /// 
                 Expanded(
                   child: ListView.builder(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -76,7 +76,7 @@ class ServiceScreen extends StatelessWidget {
                   ),
                 ),
 
-                /// 🔥 BOTTOM BAR
+                /// 
                 _BottomBar(
                   totalDuration: totalDuration,
                   totalPrice: totalPrice,
@@ -90,7 +90,7 @@ class ServiceScreen extends StatelessWidget {
     );
   }
 
-  /// 🔥 HEADER
+  ///  HEADER
   Widget _header(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
@@ -130,7 +130,7 @@ class ServiceScreen extends StatelessWidget {
   }
 }
 
-/// 💎 SERVICE CARD (SEPARATED + CLEAN)
+/// 
 class _ServiceCard extends StatelessWidget {
   final Service service;
   final bool isSelected;
@@ -175,7 +175,7 @@ class _ServiceCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            /// 🔥 ICON (FROM MODEL)
+            /// 
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
               padding: const EdgeInsets.all(12),
@@ -240,7 +240,7 @@ class _ServiceCard extends StatelessWidget {
   }
 }
 
-/// 💎 BOTTOM BAR (SEPARATED)
+/// 
 class _BottomBar extends StatelessWidget {
   final int totalDuration;
   final double totalPrice;
