@@ -1,7 +1,7 @@
 import 'service.dart';
 
 class Booking {
-  final String id; // 🔥 IMPORTANT
+  final String id; 
   final int counterId;
   final DateTime start;
   final DateTime end;
@@ -17,13 +17,13 @@ class Booking {
     DateTime? createdAt,
   }) : createdAt = createdAt ?? DateTime.now();
 
-  /// 🔥 TOTAL PRICE
+  /// 
   double get totalPrice => services.fold(0.0, (sum, s) => sum + s.price);
 
-  /// 🔥 TOTAL DURATION
+  /// 
   int get totalDuration => services.fold(0, (sum, s) => sum + s.duration);
 
-  /// 🔥 COPY WITH (VERY IMPORTANT)
+  /// 
   Booking copyWith({
     String? id,
     int? counterId,
