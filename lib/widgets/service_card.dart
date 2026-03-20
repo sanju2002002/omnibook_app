@@ -39,7 +39,7 @@ class _ServiceCardState extends State<ServiceCard> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 220),
 
-          /// 
+          
           transform: Matrix4.identity()
             ..scale(
               isSelected
