@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  /// 🔥 BRAND COLORS
+  /// 
   static const Color primary = Color(0xFF6C63FF);
   static const Color secondary = Color(0xFF8E85FF);
   static const Color backgroundDark = Color(0xFF2E2E5E);
 
-  /// 🌞 LIGHT THEME (Glass Friendly)
+  /// 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
 
@@ -55,7 +55,7 @@ class AppTheme {
     ),
   );
 
-  /// 🌙 DARK THEME (Future Ready)
+  /// 
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
