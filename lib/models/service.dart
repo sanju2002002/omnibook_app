@@ -1,10 +1,9 @@
 class Service {
-  final String id; // 🔥 IMPORTANT
+  final String id; 
   final String name;
   final int duration;
   final double price;
-  final String icon; // 🔥 UI improvement
-
+  final String icon; 
   const Service({
     required this.id,
     required this.name,
@@ -13,7 +12,7 @@ class Service {
     required this.icon,
   });
 
-  /// 🔥 COPY WITH (SCALABLE)
+  /// 
   Service copyWith({
     String? id,
     String? name,
@@ -30,7 +29,7 @@ class Service {
     );
   }
 
-  /// 🔥 EQUALITY (VERY IMPORTANT FOR PROVIDER)
+  /// 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
