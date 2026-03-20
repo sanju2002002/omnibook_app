@@ -3,23 +3,23 @@ import '../models/booking.dart';
 class SlotService {
   static const int totalCounters = 3;
 
-  /// 🔥 CONFIG
+  /// 
   static const int openingHour = 9;
   static const int closingHour = 18;
   static const int slotInterval = 30;
 
-  /// 🔥 BASE DATE (NORMALIZED)
+  /// 
   static DateTime _baseDate([DateTime? date]) {
     final now = date ?? DateTime.now();
     return DateTime(now.year, now.month, now.day);
   }
 
-  /// 🔥 NORMALIZE TIME (REMOVE SECONDS)
+  /// 
   static DateTime _normalize(DateTime dt) {
     return DateTime(dt.year, dt.month, dt.day, dt.hour, dt.minute);
   }
 
-  /// 🔥 GENERATE SLOTS
+  ///  GENERATE SLOTS
   static List<DateTime> generateSlots({DateTime? date}) {
     final base = _baseDate(date);
 
@@ -36,7 +36,7 @@ class SlotService {
     return slots;
   }
 
-  /// 🔥 OVERLAP CHECK (CORE)
+  ///  OVERLAP CHECK (CORE)
   static bool _hasOverlap({
     required DateTime start,
     required DateTime end,
@@ -50,7 +50,7 @@ class SlotService {
     return s.isBefore(be) && e.isAfter(bs);
   }
 
-  /// 🔥 CHECK IF COUNTER IS FREE
+  ///  CHECK IF COUNTER IS FREE
   static bool _isCounterFree({
     required int counter,
     required DateTime start,
@@ -65,15 +65,15 @@ class SlotService {
       }
     }
 
-    return true; // ✅ free
+    return true; // 
   }
 
-  /// 🔥 CLOSING TIME
+  ///  CLOSING TIME
   static DateTime _closingTime(DateTime date) {
     return DateTime(date.year, date.month, date.day, closingHour, 0);
   }
 
-  /// 🔥 SLOT AVAILABLE
+  ///  SLOT AVAILABLE
   static bool isSlotAvailable({
     required DateTime slotStart,
     required int duration,
@@ -82,10 +82,10 @@ class SlotService {
     final start = _normalize(slotStart);
     final end = _normalize(start.add(Duration(minutes: duration)));
 
-    /// ❌ OUTSIDE BUSINESS HOURS
+    ///  OUTSIDE BUSINESS HOURS
     if (end.isAfter(_closingTime(start))) return false;
 
-    /// ✅ CHECK EACH COUNTER
+    ///  CHECK EACH COUNTER
     for (int counter = 1; counter <= totalCounters; counter++) {
       if (_isCounterFree(
         counter: counter,
@@ -100,7 +100,7 @@ class SlotService {
     return false;
   }
 
-  /// 🔥 AVAILABLE COUNTERS COUNT
+  ///  AVAILABLE COUNTERS COUNT
   static int availableCounters({
     required DateTime slotStart,
     required int duration,
@@ -127,7 +127,7 @@ class SlotService {
     return count;
   }
 
-  /// 🔥 GET FIRST AVAILABLE COUNTER
+  ///  GET FIRST AVAILABLE COUNTER
   static int? getAvailableCounter({
     required DateTime slotStart,
     required int duration,
