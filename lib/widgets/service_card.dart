@@ -39,7 +39,7 @@ class _ServiceCardState extends State<ServiceCard> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 220),
 
-          /// 🔥 SCALE
+          /// 
           transform: Matrix4.identity()
             ..scale(
               isSelected
@@ -60,7 +60,7 @@ class _ServiceCardState extends State<ServiceCard> {
                 : null,
             color: isSelected
                 ? null
-                : Colors.white.withOpacity(0.08), // 🔥 glass feel
+                : Colors.white.withOpacity(0.08), // 
 
             borderRadius: BorderRadius.circular(22),
 
@@ -94,7 +94,7 @@ class _ServiceCardState extends State<ServiceCard> {
     );
   }
 
-  /// 🔥 ICON (DYNAMIC)
+  /// 
   Widget _buildIcon(bool isSelected) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
@@ -106,13 +106,13 @@ class _ServiceCardState extends State<ServiceCard> {
             : Colors.white.withOpacity(0.1),
       ),
       child: Text(
-        widget.service.icon ?? "✂️", // 🔥 dynamic emoji
+        widget.service.icon ?? "✂️", // 
         style: const TextStyle(fontSize: 18),
       ),
     );
   }
 
-  /// 🔥 TEXT
+  /// 
   Widget _buildText(bool isSelected) {
     return Expanded(
       child: Column(
@@ -142,7 +142,7 @@ class _ServiceCardState extends State<ServiceCard> {
     );
   }
 
-  /// 🔥 PRICE + CHECK
+  /// 
   Widget _buildPrice(bool isSelected) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
