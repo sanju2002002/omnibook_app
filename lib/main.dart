@@ -9,10 +9,10 @@ import 'screens/service_selection/service_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  /// 🔥 EDGE-TO-EDGE UI
+  /// 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
-  /// 🔥 STATUS BAR STYLE
+  /// 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -35,12 +35,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'OmniBook',
 
-        /// 💎 CLEAN THEME SYSTEM
+        /// 
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: ThemeMode.system,
 
-        /// 🔥 GLOBAL SYSTEM UI (STATUS BAR FIX)
+        /// 
         builder: (context, child) {
           return AnnotatedRegion<SystemUiOverlayStyle>(
             value: SystemUiOverlayStyle.light,
