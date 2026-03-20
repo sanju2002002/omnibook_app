@@ -5,7 +5,7 @@ import '../data/mock_bookings.dart';
 
 class BookingProvider extends ChangeNotifier {
   final List<Service> _selectedServices = [];
-  final List<Booking> _bookings = [...getMockBookings()]; // ✅ FIXED
+  final List<Booking> _bookings = [...getMockBookings()]; 
 
   List<Service> get selectedServices => List.unmodifiable(_selectedServices);
   List<Booking> get bookings => List.unmodifiable(_bookings);
@@ -35,7 +35,7 @@ class BookingProvider extends ChangeNotifier {
   }
 
   void removeBooking(Booking booking) {
-    _bookings.removeWhere((b) => b.id == booking.id); // ✅ SAFE REMOVE
+    _bookings.removeWhere((b) => b.id == booking.id); 
     notifyListeners();
   }
 
@@ -49,7 +49,7 @@ class BookingProvider extends ChangeNotifier {
     _selectedServices.clear();
     _bookings
       ..clear()
-      ..addAll(getMockBookings()); // ✅ FIXED
+      ..addAll(getMockBookings()); 
     notifyListeners();
   }
 }
