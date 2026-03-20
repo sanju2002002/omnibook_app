@@ -1,7 +1,7 @@
 import '../models/booking.dart';
 import '../models/service.dart';
 
-/// 🔥 MOCK BOOKINGS (PRODUCTION READY)
+/// 
 List<Booking> getMockBookings() {
   final now = DateTime.now();
 
