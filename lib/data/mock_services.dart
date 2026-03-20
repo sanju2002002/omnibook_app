@@ -1,6 +1,6 @@
 import '../models/service.dart';
 
-/// 🔥 GLOBAL IMMUTABLE SERVICES (BEST PRACTICE)
+
 const List<Service> mockServices = [
   Service(id: "s1", name: "Quick Trim", duration: 15, price: 20, icon: "✂️"),
   Service(
