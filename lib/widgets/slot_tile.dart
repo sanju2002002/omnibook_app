@@ -29,7 +29,7 @@ class _SlotTileState extends State<SlotTile> {
   Widget build(BuildContext context) {
     final formattedTime = DateFormat.jm().format(widget.time);
 
-    /// 
+    
     String statusText;
     Color statusColor;
 
