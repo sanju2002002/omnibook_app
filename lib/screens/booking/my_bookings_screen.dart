@@ -13,7 +13,7 @@ class MyBookingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// 🔥 OPTIMIZED (NO FULL REBUILD)
+    /// 
     final bookings = context.select<BookingProvider, List<Booking>>(
       (p) => p.bookings,
     );
@@ -35,7 +35,7 @@ class MyBookingsScreen extends StatelessWidget {
               children: [
                 _header(context),
 
-                /// 🔥 CONTENT
+                /// 
                 Expanded(
                   child: bookings.isEmpty
                       ? _emptyState()
@@ -58,7 +58,7 @@ class MyBookingsScreen extends StatelessWidget {
     );
   }
 
-  /// 🔥 HEADER
+  ///  HEADER
   Widget _header(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -98,7 +98,7 @@ class MyBookingsScreen extends StatelessWidget {
     );
   }
 
-  /// 🔥 BOOKING CARD
+  ///  BOOKING CARD
   Widget _bookingCard(BuildContext context, Booking booking) {
     final provider = context.read<BookingProvider>();
 
@@ -119,7 +119,7 @@ class MyBookingsScreen extends StatelessWidget {
                 ),
               ),
 
-              /// 🔥 CANCEL
+              ///  CANCEL
               GestureDetector(
                 onTap: () => _showCancelDialog(context, booking, provider),
                 child: Container(
@@ -222,7 +222,7 @@ class MyBookingsScreen extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          /// 🔥 TOTAL (USING MODEL GETTER ✅)
+          /// 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -245,7 +245,7 @@ class MyBookingsScreen extends StatelessWidget {
     );
   }
 
-  /// 🔥 DIALOG
+  ///  DIALOG
   void _showCancelDialog(
     BuildContext context,
     Booking booking,
@@ -286,7 +286,7 @@ class MyBookingsScreen extends StatelessWidget {
     );
   }
 
-  /// 🔥 EMPTY
+  /// 
   Widget _emptyState() {
     return Center(
       child: Column(
