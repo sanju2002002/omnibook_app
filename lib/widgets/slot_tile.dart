@@ -29,7 +29,7 @@ class _SlotTileState extends State<SlotTile> {
   Widget build(BuildContext context) {
     final formattedTime = DateFormat.jm().format(widget.time);
 
-    /// 🔥 STATUS
+    /// 
     String statusText;
     Color statusColor;
 
@@ -61,7 +61,7 @@ class _SlotTileState extends State<SlotTile> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 220),
 
-          /// 🔥 SCALE EFFECT
+          /// 
           transform: Matrix4.identity()
             ..scale(
               isSelected
@@ -107,7 +107,7 @@ class _SlotTileState extends State<SlotTile> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              /// 🔥 TIME (PRIMARY)
+              /// 
               Text(
                 formattedTime,
                 style: TextStyle(
@@ -123,7 +123,7 @@ class _SlotTileState extends State<SlotTile> {
 
               const SizedBox(height: 6),
 
-              /// 🔥 STATUS PILL
+              /// 
               AnimatedSwitcher(
                 duration: const Duration(milliseconds: 250),
                 child: Container(
